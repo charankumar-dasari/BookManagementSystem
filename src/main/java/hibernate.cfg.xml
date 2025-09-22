@@ -5,20 +5,24 @@
 
 <hibernate-configuration>
     <session-factory>
-        <!-- Database connection settings -->
+        <!-- JDBC driver -->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/project1db?useSSL=false&amp;allowPublicKeyRetrieval=true</property>
-        <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">Charan@542</property>
 
-        <!-- JDBC dialect -->
+        <!-- Railway Public MySQL URL -->
+        <property name="hibernate.connection.url">jdbc:mysql://switchyard.proxy.rlwy.net:27911/railway</property>
+
+        <!-- Railway credentials -->
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">qsKXEldLPzKUXhSPDYSllYxSXkKPXVmb</property>
+
+        <!-- Hibernate dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
 
         <!-- Hibernate options -->
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
 
-        <!-- Mapping file -->
+        <!-- Entity mapping -->
         <mapping class="com.book.entity.Book"/>
     </session-factory>
 </hibernate-configuration>
