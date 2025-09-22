@@ -1,5 +1,5 @@
-# Stage 1: build the WAR using Maven
-FROM maven:3.8.6-openjdk-17 AS build
+# Stage 1: build the WAR using Maven (use a valid Maven + JDK 17 image)
+FROM maven:3.9.4-eclipse-temurin-17 AS build
 WORKDIR /app
 
 # copy pom first (speeds up Docker cache) and then sources
